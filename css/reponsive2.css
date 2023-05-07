@@ -1,0 +1,77 @@
+@media (max-width: 992px) {
+  .mac_shopping_model_wrap {
+    width: 900px;
+    overflow: visible;
+    flex-wrap: wrap;
+    justify-content: start;
+  }
+
+  .Accessory_wrap {
+    width: 1200px;
+    overflow: visible;
+    flex-wrap: wrap;
+    justify-content: start;
+  }
+
+  .btn_wrap,
+  .btn_wrap2,
+  .btn_wrap3 {
+    display: none;
+  }
+
+  .conect_column_wrap .conect_item:first-child,
+  .conect_column_wrap .conect_item:last-child {
+    height: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header_ul {
+    position: relative;
+  }
+
+  .header_ul h1 {
+    font-size: 0.12em;
+    position: relative;
+    left: calc(50% - 10px);
+  }
+
+  .header_ul > li {
+    display: none;
+  }
+
+  .burger_sub {
+    display: block;
+    position: absolute;
+    font-size: 25px;
+    top: calc(50% - 12px);
+  }
+
+  .mac_shopping_model_wrap,
+  .mac_shopping_model_wrap2,
+  .mac_shopping_infor_wrap,
+  .video_wrap {
+    margin: auto;
+  }
+
+  .mac_shopping_infor_wrap,
+  .Accessory_wrap {
+    width: 900px;
+    margin: auto;
+    overflow: visible;
+    flex-wrap: wrap;
+    justify-content: start;
+  }
+
+  .video_wrap {
+    margin-top: 40px;
+    width: 900px;
+  }
+}
+
+@media (max-width: 576px) {
+  .mac_sub_title_wrap {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
