@@ -1,33 +1,30 @@
 //sub menu slide 이벤트
-//mainMenu와 subMenu의 id를 비교
-
 
 const mainMenu = document.querySelectorAll('.main-header ul li');
 const subMenu = document.querySelectorAll('.sub');
 
 
-mainMenu.forEach((elem, idx)=>{
+mainMenu.forEach((elem, idx) => {
 
-  elem.addEventListener('mouseenter', function(e){
-  
-    for(let i = 0; i <= (mainMenu.length - 1); i++){
+  elem.addEventListener('mouseenter', function (e) {
+
+    for (let i = 0; i <= (mainMenu.length - 1); i++) {
       subMenu[i].classList.remove('sub-show')
     }
-    console.log('이거',e.target)
 
-    if(e.target.id === subMenu[idx].id){
+    if (e.target.id === subMenu[idx].id) {
       subMenu[idx].classList.add('sub-show')
     }
   })
 
-  subMenu[idx].addEventListener('mouseleave',function(){
+  subMenu[idx].addEventListener('mouseleave', function () {
     subMenu[idx].classList.remove('sub-show')
   })
 })
 
 /*로드 이벤트 */
 const loadEvent = document.querySelector(".load_event");
-const  spanEle = document.querySelector(".load_event span");
+const spanEle = document.querySelector(".load_event span");
 
 window.addEventListener("load", function () {
   loadEvent.style.transform = "translateY(0)";
@@ -39,99 +36,117 @@ window.addEventListener("load", function () {
 
 
 //slide에 마우스 올리면 좌우 버튼이 나타는 이벤트
-//mouse가 배열이 됨
-// let moveBtn = document.querySelector(".btn_wrap"),
-//   macShopping = document.querySelector(".mac_shopping_model_wrap");
+function addMouseEvents(element, button) {
+  element.addEventListener("mouseover", function () {
+    button.classList.add("show-btn");
+  });
 
-// macShopping.addEventListener("mouseover", function () {
-//   moveBtn.style.opacity = "1";
-// });
+  element.addEventListener("mouseout", function () {
+    button.classList.remove("show-btn");
+  });
 
-// macShopping.addEventListener("mouseout", function () {
-//   moveBtn.style.opacity = "0";
-// });
+  button.addEventListener("mouseover", function () {
+    button.classList.add("show-btn");
+  });
 
-// moveBtn.addEventListener("mouseover", function () {
-//   moveBtn.style.opacity = "1";
-// });
+  button.addEventListener("mouseout", function () {
+    button.classList.remove("show-btn");
+  });
+}
 
-// moveBtn.addEventListener("mouseout", function () {
-//   moveBtn.style.opacity = "0";
-// });
+const macModel = document.querySelector(".model");
+const moveBtn1 = document.querySelector(".btn1");
+addMouseEvents(macModel, moveBtn1);
 
-// let macAccessory = document.querySelector(".Accessory_wrap"),
-//   moveBtn2 = document.querySelector(".btn_wrap2");
+const macAccessory = document.querySelector(".accessory");
+const moveBtn2 = document.querySelector(".btn2");
+addMouseEvents(macAccessory, moveBtn2);
 
-// macAccessory.addEventListener("mouseover", function () {
-//   moveBtn2.style.opacity = "1";
-// });
-
-// macAccessory.addEventListener("mouseout", function () {
-//   moveBtn2.style.opacity = "0";
-// });
-
-// moveBtn2.addEventListener("mouseover", function () {
-//   moveBtn2.style.opacity = "1";
-// });
-
-// moveBtn2.addEventListener("mouseout", function () {
-//   moveBtn2.style.opacity = "0";
-// });
-
-// let conectWrap = document.querySelector(".conect_wrap"),
-//   moveBtn3 = document.querySelector(".btn_wrap3");
-
-// conectWrap.addEventListener("mouseover", function () {
-//   moveBtn3.style.opacity = "1";
-// });
-
-// conectWrap.addEventListener("mouseout", function () {
-//   moveBtn3.style.opacity = "0";
-// });
-
-// moveBtn3.addEventListener("mouseover", function () {
-//   moveBtn3.style.opacity = "1";
-// });
-
-// moveBtn3.addEventListener("mouseout", function () {
-//   moveBtn3.style.opacity = "0";
-// });
+const macConnect = document.querySelector(".connect");
+const moveBtn3 = document.querySelector(".btn3");
+addMouseEvents(macConnect, moveBtn3);
 
 
 
+const next = false;
+const pre = true;
 
-// // slide 1
 
-// let nextBtn1 = document.querySelector(".btn_next"),
-//   preBtn1 = document.querySelector(".btn_pre"),
-//   moveShopping = document.querySelector(".mac_shopping_model_wrap");
+const moveSlide = (wrap, item, pre) => {
 
-// nextBtn1.addEventListener("click", function () {
-//   let shopping = getComputedStyle(moveShopping);
-//   let marginLeft = parseInt(shopping.marginLeft);
+  const marginLeftValue = parseInt(window.getComputedStyle(wrap).marginLeft); // 요소의 ml값
+  const itemWidth = item[0].offsetWidth; // slide가 움직여야 하는 값
+  const itemTotalWidth = itemWidth * (item.length - 3); // item의 총 ml 이동값
 
-//   if (marginLeft > -2400) {
-//     moveShopping.style.marginLeft = "-2660px";
-//   }
-//   if (marginLeft > -1860) {
-//     moveShopping.style.marginLeft = "-2300px";
-//   }
-//   if (marginLeft > -1400) {
-//     moveShopping.style.marginLeft = "-1840px";
-//   }
-//   if (marginLeft > -930) {
-//     moveShopping.style.marginLeft = "-1380px";
-//   }
-//   if (marginLeft > -470) {
-//     moveShopping.style.marginLeft = "-920px";
-//   }
-//   if (marginLeft > -10) {
-//     moveShopping.style.marginLeft = "-460px";
-//   }
-//   if (marginLeft > 450) {
-//     moveShopping.style.marginLeft = "0px";
-//   }
-// });
+
+  if (!pre) {
+    for (let i = 0; i < item.length; i++) {
+      if (marginLeftValue === -(itemWidth * i) && marginLeftValue > -itemTotalWidth) {
+        wrap.style.marginLeft = `-${itemWidth + (itemWidth * i)}px`;
+      }
+    }
+  }
+
+  // pre 버튼을 여러번 클릭 시 함수가 여러번 호출 되면서 margin 값이 양수가 돼 버튼 이벤트가 발생 안하는 문제 생김
+  //marginLeftValue === -(itemWidth * i) 마진과 이동값인 width가 같아야지만 이동하게 조건 걸어줌
+
+  if (pre) {
+    for (let i = 0; i < item.length; i++) {
+      if (marginLeftValue < 0 && marginLeftValue === -(itemWidth * i)) {
+        wrap.style.marginLeft = `${marginLeftValue + itemWidth}px`; // 이전 마진 레프트 값에 itemWidt더함
+      }
+    }
+  }
+};
+
+
+// slide 1
+
+const modelItem = document.querySelectorAll('.model > div')
+const rtArrow1 = document.querySelector(".btn1 > .btn_next");
+const ltArrow1 = document.querySelector(".btn1 > .btn_pre");
+
+rtArrow1.addEventListener("click", function () {
+  moveSlide(macModel, modelItem, next);
+})
+
+ltArrow1.addEventListener("click", function () {
+  moveSlide(macModel, modelItem, pre);
+})
+
+
+
+// slide 2
+
+const accesItem = document.querySelectorAll('.accessory > div')
+const rtArrow2 = document.querySelector(".btn2 > .btn_next");
+const ltArrow2 = document.querySelector(".btn2 > .btn_pre");
+
+rtArrow2.addEventListener("click", function () {
+  moveSlide(macAccessory, accesItem, next);
+})
+
+ltArrow2.addEventListener("click", function () {
+  moveSlide(macAccessory, accesItem, pre);
+})
+
+
+
+// slide 3
+
+const conectItem = document.querySelectorAll('.connect > div')
+const rtArrow3 = document.querySelector(".btn3 > .btn_next");
+const ltArrow3 = document.querySelector(".btn3 > .btn_pre");
+
+rtArrow3.addEventListener("click", function () {
+  moveSlide(macConnect, conectItem, next);
+})
+
+ltArrow3.addEventListener("click", function () {
+  moveSlide(macConnect, conectItem, pre);
+})
+
+
 
 // preBtn1.addEventListener("click", function () {
 //   let shopping = getComputedStyle(moveShopping);
