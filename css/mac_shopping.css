@@ -2,7 +2,6 @@
 
 body {
   background-color: #f5f5f7;
-  overflow-x: hidden;
 }
 
 body,
@@ -17,6 +16,8 @@ ul {
   box-sizing: border-box;
   line-height: 1;
   font-family: "Noto Sans KR", "맑은 고딕";
+
+  overflow-x: hidden;
 }
 
 li {
@@ -527,7 +528,7 @@ video {
 }
 
 .full {
-  background: url(/img/w2.png) no-repeat center center;
+  background: url(../img/w2.png) no-repeat center center;
   background-size: cover;
 }
 
@@ -582,12 +583,12 @@ video {
 }
 
 .row > .mac-item:first-child {
-  background: url(/img/q4.jpg) no-repeat center center;
+  background: url(../img/q4.jpg) no-repeat center center;
   background-size: cover;
 }
 
 .row > .mac-item:last-child {
-  background: url(/img/q5.jpg) no-repeat center center;
+  background: url(../img/q5.jpg) no-repeat center center;
   background-size: cover;
 }
 
@@ -609,13 +610,13 @@ video {
 }
 
 .full-2 {
-  background: url(/img/q3.jpg) no-repeat center center;
+  background: url(../img/q3.jpg) no-repeat center center;
   background-size: cover;
 }
 
 .full-3 {
   color: white;
-  background: url(/img/t2.jpg) no-repeat center center;
+  background: url(../img/t2.jpg) no-repeat center center;
   background-size: cover;
 }
 
@@ -670,7 +671,7 @@ video {
   height: 18px;
   vertical-align: middle;
   margin: 0 10px;
-  background: url("/img/footer_arrow.svg") no-repeat center center;
+  background: url("../img/footer_arrow.svg") no-repeat center center;
 }
 .nav ul li a {
   color: #6e6e73;
@@ -680,7 +681,7 @@ video {
   width: 14px;
   height: 18px;
   text-indent: -9999px;
-  background: url("/img/icon_large.svg") no-repeat center center;
+  background: url("../img/icon_large.svg") no-repeat center center;
 }
 
 .footer_list_wrap {
