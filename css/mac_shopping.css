@@ -527,7 +527,7 @@ video {
 }
 
 .full {
-  background: url(/img/w2..png) no-repeat;
+  background: url(/img/w2.png) no-repeat;
   background-size: cover;
 }
 
@@ -582,11 +582,13 @@ video {
 }
 
 .row > .mac-item:first-child {
-  background: url(/img/q4.jpg);
+  background: url(/img/q4.jpg) no-repeat;
+  background-size: cover;
 }
 
 .row > .mac-item:last-child {
-  background: url(/img/q5.jpg);
+  background: url(/img/q5.jpg) no-repeat;
+  background-size: cover;
 }
 
 .row > .mac-item small {
