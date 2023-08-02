@@ -66,7 +66,7 @@ const macConnect = document.querySelector(".connect");
 const moveBtn3 = document.querySelector(".btn3");
 addMouseEvents(macConnect, moveBtn3);
 
-
+//slide
 
 const next = false;
 const pre = true;
@@ -76,7 +76,7 @@ const moveSlide = (wrap, item, pre) => {
 
   const marginLeftValue = parseInt(window.getComputedStyle(wrap).marginLeft); // 요소의 ml값
   const itemWidth = item[0].offsetWidth; // slide가 움직여야 하는 값
-  const itemTotalWidth = itemWidth * (item.length - 3); // item의 총 ml 이동값
+  const itemTotalWidth = itemWidth * (item.length - 2); // item의 총 ml 이동값
 
 
   if (!pre) {
@@ -86,10 +86,6 @@ const moveSlide = (wrap, item, pre) => {
       }
     }
   }
-
-  // pre 버튼을 여러번 클릭 시 함수가 여러번 호출 되면서 margin 값이 양수가 돼 버튼 이벤트가 발생 안하는 문제 생김
-  //marginLeftValue === -(itemWidth * i) 마진과 이동값인 width가 같아야지만 이동하게 조건 걸어줌
-
   if (pre) {
     for (let i = 0; i < item.length; i++) {
       if (marginLeftValue < 0 && marginLeftValue === -(itemWidth * i)) {
@@ -148,91 +144,16 @@ ltArrow3.addEventListener("click", function () {
 
 
 
-// preBtn1.addEventListener("click", function () {
-//   let shopping = getComputedStyle(moveShopping);
-//   let marginLeft = parseInt(shopping.marginLeft);
+//반응형 side menu
 
-//   if (marginLeft < 10) {
-//     moveShopping.style.marginLeft = "461px";
-//   }
-//   if (marginLeft < -400) {
-//     moveShopping.style.marginLeft = "0px";
-//   }
-//   if (marginLeft < -850) {
-//     moveShopping.style.marginLeft = "-460px";
-//   }
-//   if (marginLeft < -1200) {
-//     moveShopping.style.marginLeft = "-920px";
-//   }
-//   if (marginLeft < -1700) {
-//     moveShopping.style.marginLeft = "-1380px";
-//   }
-//   if (marginLeft < -2200) {
-//     moveShopping.style.marginLeft = "-1840px";
-//   }
-//   if (marginLeft < -2500) {
-//     moveShopping.style.marginLeft = "-2300px";
-//   }
-// });
+const burger = document.querySelector('.burger_wrap');
+const sideMenu = document.querySelector('.respons-menu');
+const close = document.querySelector('.respons-inner i');
 
-// let nextBtn2 = document.querySelector(".btn_wrap2 i:last-child"),
-//   preBtn2 = document.querySelector(".btn_wrap2 i:first-child"),
-//   moveAccessory = document.querySelector(".Accessory_wrap");
+burger.addEventListener('click', function () {
+  sideMenu.classList.add('show')
+})
 
-// nextBtn2.addEventListener("click", function () {
-//   (acceCom = getComputedStyle(moveAccessory)),
-//     (accMargin = parseInt(acceCom.marginLeft));
-
-//   if (accMargin > -620) {
-//     moveAccessory.style.marginLeft = "-900px";
-//   }
-//   if (accMargin > -350) {
-//     moveAccessory.style.marginLeft = "-600px";
-//   }
-//   if (accMargin > -10) {
-//     moveAccessory.style.marginLeft = "-300px";
-//   }
-//   if (accMargin > 450) {
-//     moveAccessory.style.marginLeft = "0px";
-//   }
-// });
-
-// preBtn2.addEventListener("click", function () {
-//   (acceCom = getComputedStyle(moveAccessory)),
-//     (accMargin = parseInt(acceCom.marginLeft));
-
-//   if (accMargin > -920) {
-//     moveAccessory.style.marginLeft = "-600px";
-//   }
-//   if (accMargin > -620) {
-//     moveAccessory.style.marginLeft = "-300px";
-//   }
-//   if (accMargin > -400) {
-//     moveAccessory.style.marginLeft = "0px";
-//   }
-//   if (accMargin > -10) {
-//     moveAccessory.style.marginLeft = "460px";
-//   }
-// });
-
-// let nextBtn3 = document.querySelector(".btn_wrap3 i:last-child"),
-//   preBtn3 = document.querySelector(".btn_wrap3 i:first-child"),
-//   moveConec = document.querySelector(".conect_wrap");
-
-// nextBtn3.addEventListener("click", function () {
-//   let conecCom = getComputedStyle(moveConec);
-//   conecMargin = parseInt(conecCom.marginLeft);
-
-//   if (450 < conecMargin) {
-//     moveConec.style.marginLeft = "-80px";
-//   }
-// });
-
-// preBtn3.addEventListener("click", function () {
-//   let conecCom = getComputedStyle(moveConec),
-//     conecMargin = parseInt(conecCom.marginLeft);
-
-//   if (conecMargin < -75) {
-//     moveConec.style.marginLeft = "461px";
-//   }
-// });
+close.addEventListener('click', function () {
+  sideMenu.classList.remove('show')
+})

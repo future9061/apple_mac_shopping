@@ -1,8 +1,479 @@
 @media (max-width: 1600px) {
+  .main-header ul li {
+    font-size: 14px;
+  }
+
+  .load_event {
+    font-size: 12px;
+    padding: 15px 0px;
+  }
+
+  .mac_container {
+    max-width: 850px;
+    margin: auto;
+  }
+
+  .mac_sub_title_wrap > h1 {
+    font-size: 40px;
+  }
+
+  .mac_sub_title_box {
+    font-size: 13px;
+  }
+
+  .mac_shopping_h4 {
+    font-size: 27px;
+  }
+
+  .mac-item-wrap > .mac-item {
+    flex-basis: 280px;
+  }
+
+  .mac-item > h3 {
+    font-size: 20px;
+  }
+
+  .mac-item > button {
+    font-size: 15px;
+  }
+
+  .btn_next {
+    right: -40%;
+  }
+
+  .sale .mac-item {
+    flex-basis: 350px;
+  }
+
+  .video_wrap {
+    width: 1000px;
+  }
+
+  .accessory .first {
+    flex-basis: 300px;
+    height: 450px;
+  }
+
+  .accessory .first .mac_img_wrap {
+    height: 300px;
+  }
+
+  .accessory .mac-item:not(.first) {
+    flex-basis: 300px;
+    height: 450px;
+  }
+
+  .accessory .text > p {
+    line-height: 1.2;
+  }
+
+  .accessory .text > p:first-child {
+    font-size: 15px;
+  }
+
+  .accessory .text > p:last-child {
+    font-size: 14px;
+  }
+
+  .accessory .mac-item:not(.first) .mac_img_wrap {
+    height: 60%;
+  }
+
+  .dott img {
+    width: 13px;
+    margin: 13px;
+  }
+
+  .item_bottom p {
+    font-size: 13px;
+  }
+
+  .item_bottom div {
+    width: 25px;
+    height: 25px;
+    font-size: 13px;
+  }
 }
 
 @media (max-width: 1024px) {
+  .sub {
+    font-size: 12px;
+  }
+
+  .mac_container {
+    max-width: 780px;
+    margin: auto;
+  }
+
+  .mac_sub_title_wrap > h1 {
+    font-size: 30px;
+  }
+
+  .mac_sub_title_box {
+    font-size: 11px;
+  }
+
+  .mac_shopping_h4 {
+    font-size: 22px;
+  }
+
+  .mac-item-wrap > .mac-item {
+    flex-basis: 280px;
+  }
+
+  .mac-item > h3 {
+    font-size: 20px;
+  }
+
+  .mac-item > button {
+    font-size: 15px;
+  }
+
+  .btn_next {
+    right: -10%;
+  }
+
+  .video_wrap {
+    width: 800px;
+    height: 280px;
+  }
+
+  .video_wrap video {
+    object-fit: cover;
+  }
+
+  .accessory .first {
+    flex-basis: 300px;
+    height: 400px;
+  }
+
+  .accessory .first .mac_img_wrap {
+    height: 260px;
+  }
+
+  .accessory .mac-item:not(.first) {
+    flex-basis: 280px;
+    height: 400px;
+  }
+
+  .accessory .text > p {
+    line-height: 1.2;
+  }
+
+  .accessory .text > p:first-child {
+    font-size: 14px;
+  }
+
+  .accessory .text > p:last-child {
+    font-size: 12px;
+  }
+
+  .accessory .mac-item:not(.first) .mac_img_wrap {
+    height: 65%;
+  }
+
+  .dott img {
+    width: 13px;
+    margin: 13px;
+  }
+
+  .item_bottom p {
+    font-size: 13px;
+  }
+
+  .item_bottom div {
+    width: 25px;
+    height: 25px;
+    font-size: 13px;
+  }
+
+  .connect .mac-item {
+    height: 400px;
+  }
+
+  .connect .mac-item .mac_img_wrap {
+    height: 55%;
+  }
+
+  .row {
+    height: 400px;
+  }
+
+  .row .mac-item {
+    height: 35%;
+  }
+
+  .row .mac-item small {
+    font-size: 12px;
+  }
+
+  .row .mac-item h3 {
+    font-size: 16px;
+  }
+
+  .row .mac-item p {
+    font-size: 14px;
+  }
+
+  .w-400 .mac-item {
+    flex-basis: 300px;
+    height: 450px;
+  }
+
+  .w-220 {
+    width: 100%;
+  }
 }
 
 @media (max-width: 480px) {
+  .main-header ul {
+    display: none;
+  }
+
+  .burger_wrap {
+    display: block;
+  }
+
+  .mac_container {
+    max-width: 400px;
+  }
+
+  .load_event {
+    font-size: 9px;
+  }
+
+  .mac_sub_title_wrap {
+    align-items: baseline;
+  }
+
+  .mac_sub_title_wrap h1 {
+    font-size: 25px;
+  }
+
+  .mac_sub_title_box {
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    text-align: start;
+  }
+
+  .mac_sub_nav_wrap {
+    font-size: 15px;
+    flex-wrap: wrap;
+    justify-content: start;
+    align-items: start;
+  }
+
+  .mac_sub_nav_wrap li {
+    padding: 0;
+    margin: 10px;
+  }
+
+  .btn_pre,
+  .btn_next {
+    width: 35px;
+    height: 35px;
+    font-size: 20px;
+  }
+
+  .btn_pre {
+    left: 0;
+  }
+
+  .btn_next {
+    right: 0;
+  }
+
+  .mac_shopping_h4 {
+    font-size: 18px;
+  }
+
+  .mac-item-wrap {
+    margin-top: 20px;
+  }
+
+  .mac-item-wrap > .mac-item {
+    flex-basis: 100px;
+    height: 280px;
+    white-space: nowrap;
+  }
+  .mac-item-wrap > .mac-item h3 {
+    font-size: 14px;
+  }
+
+  .mac-item-wrap > .mac-item .mac_img_wrap {
+    width: 182px;
+    height: 40%;
+    margin: auto;
+  }
+
+  .mac-item-wrap:not(.accessory) > .mac-item .w-220 {
+    width: 70%;
+    height: 100%;
+  }
+
+  .mac-item > button {
+    font-size: 13px;
+    top: 0px;
+  }
+
+  .mac-item-wrap:nth-child(1) .mac-item:not > div:not(:nth-of-type(1)) > img {
+    width: 10px;
+  }
+
+  .mac-item p button {
+    font-size: 12px;
+  }
+
+  .r {
+    flex-wrap: wrap;
+  }
+
+  .r > .mac-item {
+    height: 280px;
+    margin: 0 10px 20px 0;
+  }
+
+  .r > .mac-item .mac_img_wrap {
+    height: 67%;
+  }
+
+  .r > .mac-item .mac_img_wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+  }
+
+  .r .text small {
+    font-size: 12px;
+  }
+
+  .r sup {
+    font-size: 5px;
+    font-weight: 400;
+  }
+
+  .r .text h3 {
+    font-size: 12px;
+    white-space: wrap;
+  }
+
+  .r .mac-item:last-child .text {
+    margin: 20px 0px 5px 0px;
+  }
+
+  .video_wrap {
+    width: 400px;
+    height: 170px;
+    margin-top: 20px;
+  }
+
+  .accessory .first {
+    flex-basis: 200px;
+    height: 300px;
+  }
+
+  .accessory .first .mac_img_wrap {
+    width: 100%;
+    height: 57%;
+  }
+
+  .accessory .mac-item:not(.first) .mac_img_wrap {
+    width: 70%;
+    height: 50%;
+  }
+
+  .accessory .mac-item:not(.first) {
+    flex-basis: 200px;
+    width: 200px;
+    height: 300px;
+  }
+
+  .accessory .text {
+    margin: 5px;
+    white-space: wrap;
+  }
+
+  .accessory .text p:last-child {
+    margin: 10px;
+    margin-top: 0px;
+  }
+
+  .accessory .dott img {
+    width: 11px;
+    height: 11px;
+    margin: 0;
+  }
+
+  .set {
+    flex-wrap: wrap;
+  }
+
+  .set .mac-item {
+    width: 190px;
+    flex-basis: 190px;
+    height: 200px;
+    font-weight: 700;
+    margin: 0 10px 30px 0;
+    white-space: wrap;
+  }
+
+  .set .mac-item .mac_img_wrap {
+    width: 100%;
+    height: 85%;
+  }
+
+  .item_bottom {
+    color: white;
+    padding: 3px;
+  }
+
+  .set .text h3,
+  .item_bottom div {
+    display: none;
+  }
+
+  .connect {
+    flex-wrap: wrap;
+  }
+
+  .connect > .mac-item > .mac_img_wrap {
+    width: 100%;
+
+    height: 58%;
+  }
+
+  .connect > .mac-item > .mac_img_wrap img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .connect > .mac-item:not(.row) {
+    margin: 0 5px 20px 0;
+    flex-basis: 190px;
+    width: 190px;
+    white-space: wrap;
+  }
+
+  .btn3 {
+    display: none;
+  }
+
+  .mac-item-wrap:last-child {
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+  }
+
+  .mac-item-wrap:last-child .mac_img_wrap {
+    width: 100%;
+    height: 62%;
+  }
+
+  .footer_list_wrap {
+    display: none;
+  }
+
+  .footer_copy > .padding_left_none {
+    display: none;
+  }
 }

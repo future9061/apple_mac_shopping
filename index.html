@@ -5,26 +5,47 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>mac shopping 하기</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="css/mac_shopping.css">
+  <link rel="stylesheet" href="css/reponsive.css">
   <script defer src="mac_shopping.js"></script>
+  <link rel="icon" href="img/favicon.png">
+  <title>mac shopping 하기</title>
 </head>
 
 <body>
 
+  <nav class="respons-menu">
+
+    <ul class="respons-inner">
+      <i class="fa-solid fa-xmark"></i>
+      <li id="store"><a href="#">스토어</a>
+      </li>
+      <li id="mac"><a href="#">Mac</a></li>
+      <li id="ipad"><a href="#">iPad</a></li>
+      <li id="iphone"><a href="#">iPhone</a></li>
+      <li id="watch"><a href="#">Watch</a></li>
+      <li id="airpods"><a href="#">AirPods</a></li>
+      <li id="tv"><a href="#">TV 및 홈</a></li>
+      <li id="entertainment"><a href="#">엔터테이먼트</a></li>
+      <li id="accessory"><a href="#">액세서리</a></li>
+      <li id="customer"><a href="#">고객지원</a></li>
+    </ul>
+  </nav>
+
   <header>
 
     <nav class="main-header">
+      <div class="burger_wrap">
+        <i class="fa-solid fa-bars"></i>
+      </div>
       <h1>
         <a href="#"><img src="img/logo.png" alt="apple-logo" /></a>
       </h1>
-      <span class="burger_sub"><i class="fa-solid fa-bars"></i></span>
       <ul>
         <li id="store"><a href="#">스토어</a>
-
         </li>
         <li id="mac"><a href="#">Mac</a></li>
         <li id="ipad"><a href="#">iPad</a></li>
@@ -572,9 +593,6 @@
       </div>
     </nav>
 
-
-
-
     <nav class="sub" id="accessory">
       <div class="sub_container">
 
@@ -626,7 +644,6 @@
       </div>
 
     </nav>
-
 
     <nav class="sub" id="customer">
       <div class="sub_container">
@@ -713,9 +730,7 @@
   <main class="mac_container">
 
     <div class="mac_sub_title_wrap">
-
       <h1>Mac 쇼핑하기</h1>
-
       <div>
         <div class="mac_sub_title_box">
           <img src="img/2img.jpg" alt="help">
@@ -731,12 +746,10 @@
             <li><span>가까운 매장 찾기 <i class="fa-solid fa-angle-right"></i></span></li>
           </ul>
         </div>
-
       </div>
-
     </div>
 
-    <ul class="mac_sub_nav_wrap ">
+    <ul class="mac_sub_nav_wrap">
       <li>모든 모델</li>
       <li>각종 할인 방법</li>
       <li>쇼핑 안내</li>
@@ -746,10 +759,9 @@
       <li>특별 할인</li>
     </ul>
 
-    <h4 class="mac_shopping_h4 ">
+    <h4 class="mac_shopping_h4">
       모든 모델.<span>당신의 선택은?</span>
     </h4>
-
 
     <div class="relative">
       <div class="mac-item-wrap model">
@@ -845,7 +857,7 @@
         <div class="mac-item">
           <h3>Mac Studio</h3>
           <div class="mac_img_wrap">
-            <img src="img/6-2.jpg" alt="product" style="width: 220px;">
+            <img src="img/6-2.jpg" alt="product">
           </div>
           <button>제품 자세히 살펴보기</button>
           <p>₩2,690,000부터 <button>구입하기</button></p>
@@ -892,15 +904,11 @@
       </div>
     </div>
 
-
-
-
-
-    <h4 class="mac_shopping_h4 ">
+    <h4 class="mac_shopping_h4">
       각종 할인 방법.<span>당신에게 가장 알맞은 방법 찾아보기.</span>
     </h4>
 
-    <div class="mac-item-wrap sale">
+    <div class="mac-item-wrap sale r">
 
       <!--1번-->
       <div class="mac-item">
@@ -944,7 +952,7 @@
       쇼핑 안내.<span>결정을 못하겠다면 여기에서.</span>
     </h4>
 
-    <div class="mac-item-wrap sale">
+    <div class="mac-item-wrap sale r">
 
       <div class="mac-item">
         <div class="text">
@@ -1117,17 +1125,12 @@
 
     </div>
 
-
-
-
-
-
     <h4 class="mac_shopping_h4 ">
       설정 및 지원.<span>차근차근 스페셜리스트의 도움과 함께.</span>
     </h4>
 
     <!--설정 및 지원-->
-    <div class="mac-item-wrap sale">
+    <div class="mac-item-wrap sale set">
 
       <div class="mac-item">
         <div class="text">
@@ -1146,7 +1149,7 @@
           <h3>든든한 보호자 AppleCare+.</h3>
         </div>
         <div class="item_bottom">
-          <p>Mac을 보호하는 방법을 알아보세요.</p>
+          <p>Mac을 보호하는 방법을 알아보기.</p>
           <div><i class="fa-solid fa-play"></i></div>
         </div>
 
@@ -1192,15 +1195,14 @@
           <div class="text">
             <small>MACOS</small>
             <h3>
-              더 스마트하게. 더 즐겁게. 한계를<br>
-              넘어. macOS Ventura 더<br>
+              더 스마트하게. 더 즐겁게. 한계를
+              넘어. macOS Ventura 더
               알아보기.
             </h3>
           </div>
           <div class="mac_img_wrap">
             <img src="img/q2.jpg" alt="product">
           </div>
-
         </div>
 
         <div class="mac-item full-2">
@@ -1213,12 +1215,7 @@
           </div>
         </div>
 
-
         <div class="row">
-
-
-
-
           <div class="mac-item">
             <small>캠퍼스에서 만나는 Apple</small>
             <h3>
@@ -1241,9 +1238,6 @@
           </div>
 
         </div>
-
-
-
       </div>
 
       <div class="btn_wrap btn3">
@@ -1478,32 +1472,6 @@
       </div>
     </div>
   </footer>
-
-
-  <script src="https://code.jquery.com/jquery-3.6.4.min.js"
-    integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
-  <script>
-    // Zoom
-    function resizeApply() {
-      var minWidth = 1920;
-      var body = document.getElementsByTagName("body")[0];
-      if (window.innerWidth < minWidth) {
-        body.style.zoom = window.innerWidth / minWidth;
-      } else {
-        body.style.zoom = 1;
-      }
-    }
-    window.onload = function () {
-      window.addEventListener("resize", function () {
-        resizeApply();
-      });
-    };
-
-    $(document).ready(function () {
-      //설정 해상도보다 낮을 때 축소
-      resizeApply();
-    });
-  </script>
 
 </body>
 

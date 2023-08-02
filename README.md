@@ -3,7 +3,7 @@
 1. [💻프로젝트 소개](#-프로젝트-소개)
 2. [🧾 code review](#-code-review)
    - [재사용을 고려한 image slide 이벤트](#재사용을-고려한-image-slide-이벤트)
-   - [sub menu slide](#sub-menu-slid)
+   - [sub menu slide](#sub-menu-slide)
    - [load event](#load-event)
 
 <br />
@@ -27,7 +27,7 @@
 
 <br />
 
-#### 재사용을 고려한 slide image slide 이벤트
+#### 재사용을 고려한 image slide 이벤트
 
 > btn을 클릭하면 img[0].width 만큼 marginLeft로 이동하는 img slide.
 
@@ -80,35 +80,59 @@ ltArrow.addEventListener("click", function () {
 });
 ```
 
-<details><summary> Click! 버튼을 빠르게 클릭 시 함수가 여러 번 호출 되면서 슬라이드에 문제가 생겼다.
+<details><summary> Click❗ 버튼을 빠르게 클릭 시 함수가 여러 번 호출 되면서 슬라이드에 문제가 생겼다.
 </summary>
-이런 경우 함수 실행중인지 여부에 따라 실행중에는 click 이벤트를 막는 함수를 이용하는 듯 했다.
+   ml로만 이동하는 슬라이드이기 때문에 ml은 무조건 0 이하의 음수인데 pre 버튼을 빠르게 누르면 함수가 중복 실행되면서 ml이 양수가 되어 버리고 btn이 작동하지 않는다. <br />
+   조건으로 ( marginLeftValue === -(itemWidth * i) ) ml이 itemwidth 값과 같을 때만 이동하게 해서 <br />
+   빠르게 클릭해도 ml이 기존과 다르게 양수가 되버리는 문제를 해결했다.
 </details>
-  이런 경우 함수 실행 도중인지를 판단하는 변수를 만들어 실행 도중에는 함수를 return해 실행을 막는 방법을 주로 쓰는 것 같았다.
-  
- 
-  //marginLeftValue === -(itemWidth * i) 마진과 이동값인 width가 같아야지만 이동하게 조건 걸어줌
 
 <br />
 
 #### sub menu slide
 
->
+> main menu에 마우스를 올리면 sub menu가 내려오는 이벤트
 
-1.
+1. for문으로 서로의 e.target.id와 sub menu의 id가 같을 때만 class를 추가해준다.
+2. 중요한 부분은 중첩 for문을 쓰는데 서브 메뉴의 class를 모두 지운 다음에 e.target의 메뉴에만 클라스를 주는 것이다.
 
 ```javascript
+const mainMenu = document.querySelectorAll(".main-header ul li");
+const subMenu = document.querySelectorAll(".sub");
 
+mainMenu.forEach((elem, idx) => {
+  elem.addEventListener("mouseenter", function (e) {
+    for (let i = 0; i <= mainMenu.length - 1; i++) {
+      subMenu[i].classList.remove("sub-show");
+    }
+
+    if (e.target.id === subMenu[idx].id) {
+      subMenu[idx].classList.add("sub-show");
+    }
+  });
+
+  subMenu[idx].addEventListener("mouseleave", function () {
+    subMenu[idx].classList.remove("sub-show");
+  });
+});
 ```
 
 <br />
 
 #### load event
 
->
+> 페이지가 load되면 배녀의 색깔이 바뀌는 이벤트.
 
 ```javascript
+const loadEvent = document.querySelector(".load_event");
+const spanEle = document.querySelector(".load_event span");
 
+window.addEventListener("load", function () {
+  loadEvent.style.transform = "translateY(0)";
+  this.setTimeout(function () {
+    loadEvent.classList.add("color-change");
+  }, 1000);
+});
 ```
 
 <br />
