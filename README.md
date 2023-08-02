@@ -5,8 +5,8 @@
    - [재사용을 고려한 image slide 이벤트](#재사용을-고려한-image-slide-이벤트)
    - [sub menu slide](#sub-menu-slide)
    - [load event](#load-event)
-
-<br />
+3. [✅ 프로젝트 리뷰](#-프로젝트-리뷰)
+   <br />
 
 ## 💻 프로젝트 소개
 
@@ -136,3 +136,15 @@ window.addEventListener("load", function () {
 ```
 
 <br />
+
+### ✅ 프로젝트 리뷰
+
+이번 프로젝트를 만들면서 이상한 문제가 생겼었다. <br >
+local에선 잘 보이는 background-image가 배포만 하면 안 보이는 것이다. <br >
+
+<img src="https://github.com/future9061/apple_mac_shopping/assets/132829711/93f8304d-f9ce-47a4-baa4-20deecf11453" width="300">
+<img src="https://github.com/future9061/apple_mac_shopping/assets/132829711/944dbbe9-829d-4963-afe9-9d08c7093858" width="300">
+
+live server에서는 잘 보였으니 경로 문제라고는 생각 못해서 background 축약형을 잘 못 쓰거나 div 크기 지정을 잘못했나 싶었는데 경로를 잘못 지정한게 맞았다.
+
+https://velog.io/@dlehdus97/github-pages-%EB%B0%B0%ED%8F%AC%EC%8B%9C-img-audio-%EA%B2%BD%EB%A1%9C-%EC%84%A4%EC%A0%95
