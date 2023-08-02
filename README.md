@@ -14,7 +14,7 @@
   
    <img src="https://github.com/future9061/apple_mac_shopping/assets/132829711/2a634acc-b32b-4bec-9bd0-274e42f72139">
 
-/_ url 넣기 _/
+  https://future9061.github.io/apple_mac_shopping/
 
    <p align="start">
     애플 클론 코딩을 한 프로젝트입니다. 슬라이드가 여러 부분에서 활용되기 때문에 재사용을 고려한 함수를 만들어 적용 했습니다.
