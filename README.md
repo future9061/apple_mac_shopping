@@ -139,7 +139,7 @@ window.addEventListener("load", function () {
 
 <br />
 
-### ✅ 프로젝트 리뷰
+## ✅ 프로젝트 리뷰
 
 이번 프로젝트를 만들면서 이상한 문제가 생겼었다. <br >
 local에선 잘 보이는 background-image가 배포만 하면 안 보이는 것이다. <br >
