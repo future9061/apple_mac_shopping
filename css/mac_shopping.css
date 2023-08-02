@@ -528,7 +528,7 @@ video {
 }
 
 .full {
-  background: url(../img/w2.png) no-repeat center center;
+  background: url("../img/w2.png") no-repeat center center;
   background-size: cover;
 }
 
@@ -583,12 +583,12 @@ video {
 }
 
 .row > .mac-item:first-child {
-  background: url(../img/q4.jpg) no-repeat center center;
+  background: url("../img/q4.jpg") no-repeat center center;
   background-size: cover;
 }
 
 .row > .mac-item:last-child {
-  background: url(../img/q5.jpg) no-repeat center center;
+  background: url("../img/q5.jpg") no-repeat center center;
   background-size: cover;
 }
 
@@ -610,13 +610,13 @@ video {
 }
 
 .full-2 {
-  background: url(../img/q3.jpg) no-repeat center center;
+  background: url("../img/q3.jpg") no-repeat center center;
   background-size: cover;
 }
 
 .full-3 {
   color: white;
-  background: url(../img/t2.jpg) no-repeat center center;
+  background: url("../img/t2.jpg") no-repeat center center;
   background-size: cover;
 }
 
