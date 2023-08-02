@@ -96,6 +96,10 @@ header {
   background-color: #f5f5f7;
 }
 
+.main-header > h1 {
+  overflow: hidden;
+}
+
 .burger_sub {
   display: none;
 }
@@ -207,11 +211,11 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 0;
 }
 
 .mac_sub_title_wrap > h1 {
   font-size: 50px;
+  overflow: hidden;
 }
 
 .mac_sub_title_box {
@@ -368,9 +372,9 @@ header {
 
 .mac-item > h3 {
   text-align: left;
-  white-space: nowrap;
+  white-space: wrap;
   margin-top: 20px;
-  font-size: 25px;
+  font-size: 20px;
 }
 .mac_img_wrap {
   width: 300px;
@@ -671,7 +675,7 @@ video {
   height: 18px;
   vertical-align: middle;
   margin: 0 10px;
-  background: url("../img/footer_arrow.svg") no-repeat center center;
+  background: url("../img/footer_arrow.svg") no-repeat;
 }
 .nav ul li a {
   color: #6e6e73;
@@ -681,7 +685,7 @@ video {
   width: 14px;
   height: 18px;
   text-indent: -9999px;
-  background: url("../img/icon_large.svg") no-repeat center center;
+  background: url("../img/icon_large.svg") no-repeat;
 }
 
 .footer_list_wrap {
