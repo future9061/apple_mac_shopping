@@ -1,11 +1,12 @@
 # 🎇목차
 
 1. [💻프로젝트 소개](#-프로젝트-소개)
-2. [🧾 code review](#-code-review)
+2. [📦 개발 환경](#-개발-환경)
+3. [🧾 code review](#-code-review)
    - [재사용을 고려한 image slide 이벤트](#재사용을-고려한-image-slide-이벤트)
    - [sub menu slide](#sub-menu-slide)
    - [load event](#load-event)
-3. [✅ 프로젝트 리뷰](#-프로젝트-리뷰)
+4. [✅ 프로젝트 리뷰](#-프로젝트-리뷰)
    <br />
 
 ## 💻 프로젝트 소개
@@ -22,6 +23,13 @@
       
    </p>
 </div>
+
+## 📦 개발 환경
+
+- **editor** : <img src="https://img.shields.io/badge/VisualStudioCode-007ACC?style=flat-square&logo=visualstudiocode&logoColor=white"/>
+- **language** : <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=HTML5&logoColor=white"/> <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=CSS3&logoColor=white"/> <img src="https://img.shields.io/badge/javascript-F7DF1E?style=flat-square&logo=javascript&logoColor=white"/>
+  <br />
+
 
 <br />
 
